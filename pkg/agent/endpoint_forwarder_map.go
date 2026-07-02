@@ -3,7 +3,7 @@ package agent
 import (
 	"sync"
 
-	"golang.ngrok.com/ngrok/v2"
+	"github.com/billythach/ngrok-go/v2"
 )
 
 type endpointForwarderMap struct {

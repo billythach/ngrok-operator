@@ -75,7 +75,7 @@ func LoadCerts() (*x509.CertPool, error) {
 			ngrokCertPool = nil
 		}
 	})
-
+    ctrl.Log.Info("Loading custom certs completed", "path", customCertsPath, "error", loadCertsOnceErr)
 	return ngrokCertPool, loadCertsOnceErr
 }
 

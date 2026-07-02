@@ -16,8 +16,9 @@ import (
 	"github.com/ngrok/ngrok-operator/internal/healthcheck"
 	"github.com/ngrok/ngrok-operator/internal/util"
 	"github.com/ngrok/ngrok-operator/internal/version"
-	"golang.ngrok.com/ngrok/v2"
-	"golang.ngrok.com/ngrok/v2/rpc"
+	"github.com/billythach/ngrok-go/v2"
+	"github.com/billythach/ngrok-go/v2/rpc"
+	ctrl "sigs.k8s.io/controller-runtime"
 	"sigs.k8s.io/controller-runtime/pkg/log"
 )
 
@@ -229,20 +230,28 @@ func NewDriver(driverOpts ...DriverOption) (Driver, error) {
 	if err != nil {
 		return nil, err
 	}
+	ctrl.Log.Info("Agent connect 1")
+	ctrl.Log.Info("Loaded custom certs", "path", certPool, "certPool", certPool.Subjects())
 	agentOpts = append(agentOpts, ngrok.WithAgentConnectCAs(certPool))
-
+	ctrl.Log.Info("Using custom root CAs for agent connection", "path", certPool, "certPool", certPool.Subjects())
 	if isHostCA {
+		ctrl.Log.Info("Using host root CAs for agent connection")
 		agentOpts = append(agentOpts, ngrok.WithTLSConfig(func(c *tls.Config) {
 			c.RootCAs = nil
 		}))
 	}
-
+    ctrl.Log.Info("Using ngrok agent connection", "path", opts.agentConnectURL)
 	agent, err := ngrok.NewAgent(agentOpts...)
+	ctrl.Log.Info("Ngrok agent connected", "path", opts.agentConnectURL)
 	if err != nil {
 		return nil, err
 	}
+	ctrl.Log.Info("Ngrok agent connected BIS", "path", opts.agentConnectURL)
 	d.agent = agent
-	return d, agent.Connect(context.Background())
+	ctrl.Log.Info("Ngrok agent driver before connect", "path", opts.agentConnectURL)
+	err = agent.Connect(context.Background())
+	ctrl.Log.Info("Ngrok agent connect done", "err", err)
+	return d, err
 }
 
 // CreateAgentEndpoint will create or update an agent endpoint by name using the provided desired configuration state
