@@ -3,7 +3,7 @@ module github.com/ngrok/ngrok-operator
 go 1.26.4
 
 require (
-	github.com/billythach/ngrok-go/v2 v2.1.9
+	github.com/billythach/ngrok-go/v2 v2.1.14
 	github.com/docker/docker v28.5.2+incompatible
 	github.com/fsnotify/fsnotify v1.10.1
 	github.com/go-logr/logr v1.4.3

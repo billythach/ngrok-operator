@@ -31,6 +31,14 @@ github.com/billythach/ngrok-go/v2 v2.1.8 h1:BLarTwucvRMAA+VCUxd29WIwdoTUv6TA8vn9
 github.com/billythach/ngrok-go/v2 v2.1.8/go.mod h1:HiSzZfqGy+tznXioGab5Rq8SJmtaeGUuXWJHHkbDA1g=
 github.com/billythach/ngrok-go/v2 v2.1.9 h1:+sBveWxXwtpJtNo+rMdKSz9/+aX7389gD+LqzHeASZM=
 github.com/billythach/ngrok-go/v2 v2.1.9/go.mod h1:HiSzZfqGy+tznXioGab5Rq8SJmtaeGUuXWJHHkbDA1g=
+github.com/billythach/ngrok-go/v2 v2.1.10 h1:Le/NnMOhrsPGGXHDaSGI6SMfZMJIKS9DM43wAEUzP2w=
+github.com/billythach/ngrok-go/v2 v2.1.10/go.mod h1:HiSzZfqGy+tznXioGab5Rq8SJmtaeGUuXWJHHkbDA1g=
+github.com/billythach/ngrok-go/v2 v2.1.11 h1:O7JlByEGPS0RQbO5Bfpc9LU/hs320du6vDviEpIpfkc=
+github.com/billythach/ngrok-go/v2 v2.1.11/go.mod h1:dRfbFSSepCm73erzYqrKxsCZJUAbUEtzoGOpW4U6/iA=
+github.com/billythach/ngrok-go/v2 v2.1.13 h1:ZrsvTUvHzWQybUVD7SzjJ+CHg4fi5ZoWtxaRb3Pv7lo=
+github.com/billythach/ngrok-go/v2 v2.1.13/go.mod h1:YeN2YxhrAcKhMZh3nc1JNFmlpnuwYRqCYoBgl0jxvq4=
+github.com/billythach/ngrok-go/v2 v2.1.14 h1:JIiu74wQoR3qKxN2lcu15YvPoxX022B7BOrFKw62Xyg=
+github.com/billythach/ngrok-go/v2 v2.1.14/go.mod h1:YeN2YxhrAcKhMZh3nc1JNFmlpnuwYRqCYoBgl0jxvq4=
 github.com/bombsimon/wsl v1.2.5/go.mod h1:43lEF/i0kpXbLCeDXL9LMT8c92HyBywXb0AsgMHYngM=
 github.com/buger/jsonparser v1.1.1/go.mod h1:6RYKKt7H4d4+iWqouImQ9R2FZql3VbhNgx27UK13J/0=
 github.com/census-instrumentation/opencensus-proto v0.2.1/go.mod h1:f6KPmirojxKA12rnyqOA5BBL4O983OfeGPqjHWSTneU=

@@ -24,6 +24,7 @@ coverage/
 *.swo
 *~
 .DS_Store
+*.iml
 
 e2e-fixtures/*/config*.yaml
 

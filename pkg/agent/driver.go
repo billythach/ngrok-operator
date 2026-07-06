@@ -143,6 +143,7 @@ func NewDriver(driverOpts ...DriverOption) (Driver, error) {
 	readyChan <- errors.New("attempting to connect")
 
 	agentOpts := []ngrok.AgentOption{
+		ngrok.WithProxyURL(os.Getenv("HTTP_PROXY")),
 		ngrok.WithClientInfo("ngrok-operator", version.GetVersion(), opts.agentComments...),
 		ngrok.WithAuthtoken(os.Getenv("NGROK_AUTHTOKEN")),
 		ngrok.WithLogger(slog.New(logr.ToSlogHandler(logger))),
